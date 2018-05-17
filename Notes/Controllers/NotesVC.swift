@@ -62,6 +62,16 @@ class NotesVC: UIViewController {
         }
     }
     
+    @IBAction func infoBtnPressed(_ sender: UIBarButtonItem) {
+        createAlert()
+    }
+    
+    
+    func createAlert() {
+        let alert = UIAlertController(title: "Your id is", message: LOGGED_USER_ID, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
     
 
 }
